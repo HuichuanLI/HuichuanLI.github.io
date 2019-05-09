@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="algorithme,java,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Data structure java and pythonupdate python versionobjectif : realsize all the data structure by java and python      第一章 排序基础  java python     1-1 选择排序 - Selection Sort java python   1-2   插入排序法 - In">
+<meta name="keywords" content="algorithme,java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="algoritme">
+<meta property="og:url" content="http://yoursite.com/2019/05/09/algoritme/index.html">
+<meta property="og:site_name" content="Huichuan LI &#39;s blog">
+<meta property="og:description" content="Data structure java and pythonupdate python versionobjectif : realsize all the data structure by java and python      第一章 排序基础  java python     1-1 选择排序 - Selection Sort java python   1-2   插入排序法 - In">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-09T17:43:19.833Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="algoritme">
+<meta name="twitter:description" content="Data structure java and pythonupdate python versionobjectif : realsize all the data structure by java and python      第一章 排序基础  java python     1-1 选择排序 - Selection Sort java python   1-2   插入排序法 - In">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/05/09/algoritme/">
+
+
+
+
+
+  <title>algoritme | Huichuan LI 's blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Huichuan LI 's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">李汇川个人小站</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/09/algoritme/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Huichuan LI">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Huichuan LI 's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">algoritme</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-09T19:41:39+02:00">
+                2019-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Data-structure-java-and-python"><a href="#Data-structure-java-and-python" class="headerlink" title="Data structure java and python"></a>Data structure java and python</h1><p>update python version<br>objectif : realsize all the data structure by java and python </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong> 第一章 排序基础 </strong></th>
+<th style="text-align:center">java</th>
+<th style="text-align:left">python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1-1 选择排序 - Selection Sort</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/java/tree/master/%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%8E%92%E5%BA%8F%E5%9F%BA%E7%A1%80/selection%20sort" target="_blank" rel="noopener">java</a></td>
+<td style="text-align:left"><a href="https://github.com/HuichuanLI/play-with-data-structures-java-and-python-/tree/master/python/sort.py" target="_blank" rel="noopener">python</a></td>
+</tr>
+<tr>
+<td style="text-align:left">1-2   插入排序法 - Insertion Sort</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/java/tree/master/%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%8E%92%E5%BA%8F%E5%9F%BA%E7%A1%80/insertion%20sort" target="_blank" rel="noopener">java</a></td>
+<td style="text-align:left"><a href="https://github.com/HuichuanLI/play-with-data-structures-java-and-python-/tree/master/python/sort.py" target="_blank" rel="noopener">python</a></td>
+</tr>
+<tr>
+<td style="text-align:left">1-3  更多关于O(n^2)排序算法的思考 shell Sort</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/java/tree/master/%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%8E%92%E5%BA%8F%E5%9F%BA%E7%A1%80/shellsort" target="_blank" rel="noopener">java</a></td>
+<td style="text-align:left"><a href="https://github.com/HuichuanLI/play-with-data-structures-java-and-python-/tree/master/python/sort.py" target="_blank" rel="noopener">python</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong> 第二章高级排序算法 </strong></td>
+<td style="text-align:center">java</td>
+</tr>
+<tr>
+<td style="text-align:left">2-1 归并排序- Merge Sort</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/java/tree/master/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/merge%20sort" target="_blank" rel="noopener">java</a></td>
+</tr>
+<tr>
+<td style="text-align:left">2-2   归并排序法的优化 - Merge Sort</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/java/tree/master/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/merge%20sort%20improvement" target="_blank" rel="noopener">java</a></td>
+</tr>
+<tr>
+<td style="text-align:left">2-3  自底向上的归并排序算法 Merge Sort</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/java/tree/master/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/merge%20sort%20bu" target="_blank" rel="noopener">java</a></td>
+</tr>
+<tr>
+<td style="text-align:left">2-4  快速排序法 - Quick Sort</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/java/tree/master/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/merge%20sort%20bu" target="_blank" rel="noopener">java</a></td>
+</tr>
+<tr>
+<td style="text-align:left">2-5  随机快速排序法 - Random Quick Sort</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/java/tree/master/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/random%20quick%20sort" target="_blank" rel="noopener">java</a></td>
+</tr>
+<tr>
+<td style="text-align:left">2-5  三路快速排序法 - Random Quick Sort 3 ways</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/java/tree/master/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/quick%20sort%203%20ways" target="_blank" rel="noopener">java</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong> 第三章 数据结构 (数组)</strong></td>
+<td style="text-align:center">java</td>
+</tr>
+<tr>
+<td style="text-align:left">3-1 数组 - Array</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/java/tree/master/%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%95%B0%E7%BB%84/%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84" target="_blank" rel="noopener">java</a></td>
+<td style="text-align:left"><a href="https://github.com/HuichuanLI/play-with-data-structures-java-and-python-/tree/master/python/Arrary" target="_blank" rel="noopener">python</a></td>
+</tr>
+<tr>
+<td style="text-align:left">3-2 栈- Stack</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/java/tree/master/%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%95%B0%E7%BB%84/%E6%A0%88" target="_blank" rel="noopener">java</a></td>
+<td style="text-align:left"><a href="https://github.com/HuichuanLI/play-with-data-structures-java-and-python-/tree/master/python/stack" target="_blank" rel="noopener">python</a></td>
+</tr>
+<tr>
+<td style="text-align:left">3-3 队列- Queue</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/java/tree/master/第三章数组/队列" target="_blank" rel="noopener">java</a></td>
+</tr>
+<tr>
+<td style="text-align:left">3-4 循环队列- Queue</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/java/tree/master/第三章数组/循环队列" target="_blank" rel="noopener">java</a></td>
+</tr>
+<tr>
+<td style="text-align:left">3-5 leetcode</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/java/tree/master/第三章数组/循环队列" target="_blank" rel="noopener">java</a></td>
+<td style="text-align:left"><a href="https://github.com/HuichuanLI/play-with-data-structures-java-and-python-/tree/master/python/stack" target="_blank" rel="noopener">python</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong> 第四章 数据结构 (链表)</strong></td>
+<td style="text-align:center">java</td>
+</tr>
+<tr>
+<td style="text-align:left">4-1 链表 - Linklist</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/java-and-python-/tree/master/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E9%93%BE%E8%A1%A8/4-1" target="_blank" rel="noopener">java</a></td>
+<td style="text-align:left"><a href="https://github.com/HuichuanLI/play-with-data-structures-java-and-python-/blob/master/python/linklist/linklist.py" target="_blank" rel="noopener">python</a></td>
+</tr>
+<tr>
+<td style="text-align:left">4-2 链表栈- linklistStack</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/java-and-python-/tree/master/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E9%93%BE%E8%A1%A8/4-2" target="_blank" rel="noopener">java</a></td>
+<td style="text-align:left"><a href="https://github.com/HuichuanLI/play-with-data-structures-java-and-python-/blob/master/python/linklist/linkliststack.py" target="_blank" rel="noopener">python</a></td>
+</tr>
+<tr>
+<td style="text-align:left">4-3 链表队列- linklistQueue</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/java-and-python-/tree/master/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E9%93%BE%E8%A1%A8/4-3" target="_blank" rel="noopener">java</a></td>
+<td style="text-align:left"><a href="https://github.com/HuichuanLI/play-with-data-structures-java-and-python-/blob/master/python/linklist/linklistqueue.py" target="_blank" rel="noopener">python</a></td>
+</tr>
+<tr>
+<td style="text-align:left">4-4 leetcode203- linklistQueue</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/java-and-python-/tree/master/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E9%93%BE%E8%A1%A8/4-4" target="_blank" rel="noopener">java</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong> 第五章 数据结构 (二分查找树)</strong></td>
+<td style="text-align:center">java</td>
+</tr>
+<tr>
+<td style="text-align:left">5-1 树- binary search tree</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/play-with-data-structures-java-and-python-/tree/master/%E7%AC%AC%E4%BA%94%E7%AB%A0%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2%E6%A0%91/5-1" target="_blank" rel="noopener">java</a></td>
+</tr>
+<tr>
+<td style="text-align:left">5-2 leetcode804- binary search tree</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/play-with-data-structures-java-and-python-/tree/master/%E7%AC%AC%E4%BA%94%E7%AB%A0%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2%E6%A0%91/5-2" target="_blank" rel="noopener">java</a></td>
+</tr>
+<tr>
+<td style="text-align:left">5-3 删除子节点- binary search tree</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/play-with-data-structures-java-and-python-/tree/master/%E7%AC%AC%E4%BA%94%E7%AB%A0%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2%E6%A0%91/5-1" target="_blank" rel="noopener">java</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong> 第六章 数据结构 (集合和映射)</strong></td>
+<td style="text-align:center">java</td>
+</tr>
+<tr>
+<td style="text-align:left">6-1 集合-Set</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/play-with-data-structures-java-and-python-/tree/master/%E7%AC%AC%E5%85%AD%E7%AB%A0%E9%9B%86%E5%90%88%E5%92%8C%E6%98%A0%E5%B0%84/%E9%9B%86%E5%90%88" target="_blank" rel="noopener">java</a></td>
+</tr>
+<tr>
+<td style="text-align:left">6-2 集合-Map</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/play-with-data-structures-java-and-python-/tree/master/第六章集合和映射/映射" target="_blank" rel="noopener">java</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong> 第七章 数据结构 (堆和优先队列)</strong></td>
+<td style="text-align:center">java</td>
+</tr>
+<tr>
+<td style="text-align:left">7-1 堆-Heap</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/play-with-data-structures-java-and-python-/tree/master/%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E5%A0%86%E5%92%8C%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97" target="_blank" rel="noopener">java</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong> 第八章 数据结构 (线段树) </strong></td>
+<td style="text-align:center">java</td>
+</tr>
+<tr>
+<td style="text-align:left">8-1 线段树-Segment tree</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/play-with-data-structures-java-and-python-/tree/master/%E7%AC%AC%E5%85%AB%E7%AB%A0%20%E7%BA%BF%E6%AE%B5%E6%A0%91/%E7%BA%BF%E6%AE%B5%E6%A0%91" target="_blank" rel="noopener">java</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong> 第九章 数据结构 (并查集) </strong></td>
+<td style="text-align:center">java</td>
+</tr>
+<tr>
+<td style="text-align:left">9-1 并查集-Union find</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/play-with-data-structures-java-and-python-/tree/master/%E7%AC%AC%E4%B9%9D%E7%AB%A0%20%E5%B9%B6%E6%9F%A5%E9%9B%86" target="_blank" rel="noopener">java</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong> 第十章 数据结构(字典树) </strong></td>
+<td style="text-align:center">java</td>
+</tr>
+<tr>
+<td style="text-align:left">10-1 字典树-trie</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/play-with-data-structures-java-and-python-/tree/master/%E7%AC%AC%E5%8D%81%E7%AB%A0%20%E5%AD%97%E5%85%B8%E6%A0%91" target="_blank" rel="noopener">java</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong> 第十一章 数据结构(红黑树) </strong></td>
+<td style="text-align:center">java</td>
+</tr>
+<tr>
+<td style="text-align:left">11-1 红黑树-RedBlack tree</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/play-with-data-structures-java-and-python-/tree/master/%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%20%E7%BA%A2%E9%BB%91%E6%A0%91/src" target="_blank" rel="noopener">java</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong> 第十二章 数据结构(AVL树) </strong></td>
+<td style="text-align:center">java</td>
+</tr>
+<tr>
+<td style="text-align:left">11-1 AVL树-AVL tree</td>
+<td style="text-align:center"><a href="https://github.com/HuichuanLI/play-with-data-structures-java-and-python-/tree/master/%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0%20AVL" target="_blank" rel="noopener">java</a></td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/algorithme/" rel="tag"># algorithme</a>
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/09/hello-world/" rel="next" title="Hello world">
+                <i class="fa fa-chevron-left"></i> Hello world
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Huichuan LI</p>
+              <p class="site-description motion-element" itemprop="description">关于机器学习，深度学习，算法</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Data-structure-java-and-python"><span class="nav-number">1.</span> <span class="nav-text">Data structure java and python</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Huichuan LI</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
